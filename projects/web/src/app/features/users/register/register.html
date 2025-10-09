@@ -1,0 +1,51 @@
+<div class="register-page">
+  <div class="register-card">
+    <h2>Crie sua conta</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <ui-input
+        label="Nome completo"
+        placeholder="Digite seu nome"
+        [value]="form.get('name')?.value || ''"
+        (valueChange)="form.get('name')?.setValue($event)"
+      ></ui-input>
+
+      <ui-input
+        label="CPF"
+        placeholder="Digite seu CPF"
+        [value]="form.get('cpf')?.value || ''"
+        (valueChange)="form.get('cpf')?.setValue($event)"
+      ></ui-input>
+
+      <ui-input
+        label="E-mail"
+        placeholder="Digite seu e-mail"
+        type="email"
+        [value]="form.get('email')?.value || ''"
+        (valueChange)="form.get('email')?.setValue($event)"
+      ></ui-input>
+
+      <ui-input
+        label="Senha"
+        placeholder="Digite sua senha"
+        type="password"
+        [value]="form.get('password')?.value || ''"
+        (valueChange)="form.get('password')?.setValue($event)"
+      ></ui-input>
+
+      <ui-input
+        label="Confirmar senha"
+        placeholder="Confirme sua senha"
+        type="password"
+        [value]="form.get('confirmPassword')?.value || ''"
+        (valueChange)="form.get('confirmPassword')?.setValue($event)"
+      ></ui-input>
+
+      <ui-button label="Registrar" variant="primary" type="submit"></ui-button>
+    </form>
+
+    <div class="theme-toggle">
+      <!-- <button (click)="theme.toggleTheme()">Trocar tema</button> -->
+    </div>
+  </div>
+</div>
