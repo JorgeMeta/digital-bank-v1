@@ -46,22 +46,9 @@ Foi desenvolvida com foco em boas práticas de arquitetura, componentes reativos
 
 ---
 
-## 🏗️ Estrutura de Pastas
-src/
-├── app/
-│ ├── core/
-│ │ ├── config/
-│ │ ├── guards/
-│ │ ├── services/
-│ │ └── interceptors/
-│ ├── features/
-│ │ ├── users/
-│ │ │ ├── login/
-│ │ │ └── register/
-│ │ └── userlist/
-│ ├── shared/
-│ │ ├── components/
-│ │ └── models/
-│ └── app.routes.ts
-└── assets/
+Clone o repositório:
+
+```bash
+git clone https://github.com/JorgeMeta/digital-bank-v1.git
+cd digital-bank-v1
 
