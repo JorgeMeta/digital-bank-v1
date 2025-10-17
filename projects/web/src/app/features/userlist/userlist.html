@@ -1,0 +1,19 @@
+<div class="userlist-container">
+  <h2>Lista de Usuários</h2>
+
+  <!-- Passa a lista original completa para o Filter -->
+  <da-filter [data]="users()" (filterData)="onFilteredData($event)" label="Buscar"></da-filter>
+
+  <!-- A tabela recebe a lista filtrada -->
+
+  <da-table [columns]="columns" [data]="paginatedUsers"></da-table>
+
+  <!-- Paginação -->
+  @if (filteredUsers().length > itemsPerPage()) {
+  <da-pagination
+    [totalItems]="filteredUsers().length"
+    [itemsPerPage]="itemsPerPage()"
+    (pageChange)="onPageChange($event)"
+  ></da-pagination>
+  }
+</div>

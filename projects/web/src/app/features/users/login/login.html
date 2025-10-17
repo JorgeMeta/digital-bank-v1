@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="register-page">
+  <div class="register-card">
+    <h2>Entre em sua conta</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <ui-input
+        label="E-mail"
+        placeholder="Digite seu e-mail"
+        type="email"
+        [value]="form.get('email')?.value || ''"
+        (valueChange)="form.get('email')?.setValue($event)"
+      ></ui-input>
+
+      <ui-input
+        label="Senha"
+        placeholder="Digite sua senha"
+        type="password"
+        [value]="form.get('password')?.value || ''"
+        (valueChange)="form.get('password')?.setValue($event)"
+      ></ui-input>
+      <ui-button label="Entrar" variant="primary" type="submit"></ui-button>
+    </form>
+
+    <div class="theme-toggle"></div>
+  </div>
+</div>

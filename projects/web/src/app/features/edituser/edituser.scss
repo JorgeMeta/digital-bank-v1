@@ -1,0 +1,51 @@
+@use 'sass:color';
+.edit-user-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 550px;
+  height: 400px;
+  background-color: var(--fourth-color);
+  transition: background-color var(--transition-normal);
+
+  h2 {
+    color: var(--first-color);
+  }
+  .close-button {
+    position: absolute;
+    top: 10px; /* distância do topo */
+    right: 10px; /* distância da direita */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--first-color);
+    transition: color 0.2s ease;
+
+    mat-icon {
+      font-size: 22px;
+    }
+  }
+}
+
+.mat-dialog-content {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    ui-input {
+      width: 70%;
+    }
+    ui-button {
+      width: 70%;
+    }
+  }
+}
+::ng-deep .mat-mdc-dialog-surface {
+  background: transparent !important;
+  box-shadow: 0px 0px 10px 1px #242424;
+}

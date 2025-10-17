@@ -1,0 +1,24 @@
+<div class="edit-user-container">
+  <button mat-icon-button mat-dialog-close class="close-button" aria-label="Fechar">
+    <mat-icon>close</mat-icon>
+  </button>
+  <h2>Editar Usuário</h2>
+  <div class="mat-dialog-content">
+    <form [formGroup]="form">
+      <ui-input
+        label="Nome completo"
+        placeholder="Atualize seu nome"
+        [value]="form.get('name')?.value || ''"
+        (valueChange)="form.get('name')?.setValue($event)"
+      ></ui-input>
+      <ui-input
+        label="E-mail"
+        placeholder="Atualize seu e-mail"
+        type="email"
+        [value]="form.get('email')?.value || ''"
+        (valueChange)="form.get('email')?.setValue($event)"
+      ></ui-input>
+      <ui-button label="Registrar" variant="primary" type="submit"></ui-button>
+    </form>
+  </div>
+</div>
