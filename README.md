@@ -47,4 +47,21 @@ Foi desenvolvida com foco em boas práticas de arquitetura, componentes reativos
 ---
 
 ## 🏗️ Estrutura de Pastas
+src/
+├── app/
+│ ├── core/
+│ │ ├── config/
+│ │ ├── guards/
+│ │ ├── services/
+│ │ └── interceptors/
+│ ├── features/
+│ │ ├── users/
+│ │ │ ├── login/
+│ │ │ └── register/
+│ │ └── userlist/
+│ ├── shared/
+│ │ ├── components/
+│ │ └── models/
+│ └── app.routes.ts
+└── assets/
 
