@@ -1,59 +1,50 @@
-# DigitalBankAppV1
+<h1 align="center">💳 Digital Bank v1</h1>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+<p align="center">
+  <em>Um banco digital moderno, desenvolvido em Angular + TypeScript, com autenticação, registro de usuários e integração com MockAPI.</em>
+</p>
 
-## Development server
+---
 
-To start a local development server, run:
+## 🖥️ Visão Geral
 
-```bash
-ng serve
-```
+O **Digital Bank v1** é uma aplicação web que simula o ambiente de um banco digital.  
+Foi desenvolvida com foco em boas práticas de arquitetura, componentes reativos e design escalável.  
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+👤 Recursos principais:
+- Login com autenticação via token
+- Registro de novos usuários
+- Listagem de usuários autenticados
+- Proteção de rotas com `authGuard`
+- Logout com limpeza segura do estado
+- Toasts personalizados para feedback do usuário
+- Validação completa de formulários com `ReactiveFormsModule`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧠 Tecnologias Utilizadas
 
-```bash
-ng generate component component-name
-```
+| Tecnologia | Descrição |
+|-------------|------------|
+| 🅰️ **Angular 18+** | Framework principal da aplicação |
+| 💪 **TypeScript** | Tipagem forte e manutenção do código |
+| 🎯 **RxJS** | Programação reativa e controle de fluxos |
+| 🧱 **MockAPI** | API fake usada para persistir usuários |
+| 💅 **SCSS / Material Design** | Estilo moderno e responsivo |
+| 🔐 **Auth Guard / Signals** | Controle de sessão e reatividade do estado |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🚀 Funcionalidades
 
-## Building
+✅ Registro de novos usuários com validação de CPF  
+✅ Login e geração de token fake (mockado)  
+✅ Redirecionamento inteligente de rotas autenticadas  
+✅ Logout com limpeza completa do `localStorage`  
+✅ Feedback visual (toasts) para erros e sucessos  
+✅ Proteção de componentes via `authGuard`
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🏗️ Estrutura de Pastas
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
